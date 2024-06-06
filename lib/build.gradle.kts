@@ -41,11 +41,11 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            setUrl(uri("https://maven.pkg.github.com/Snippet-Searcher/spring-mvc-redis-streams"))
-            credentials {
-                username = System.getenv("GITHUB_USERNAME")
-                password = System.getenv("GITHUB_TOKEN")
-            }
+            url = uri("https://maven.pkg.github.com/Ingsis-Group-4/spring-mvc-redis-streams")
+    		credentials {
+    			username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_ACTOR")
+    			password = project.findProperty("gpr.key") ?: System.getenv("GITHUB_TOKEN")
+		    }    
         }
     }
     publications {
