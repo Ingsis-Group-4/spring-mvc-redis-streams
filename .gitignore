@@ -5,3 +5,7 @@
 build
 
 .idea
+
+.env
+
+gradle.properties
