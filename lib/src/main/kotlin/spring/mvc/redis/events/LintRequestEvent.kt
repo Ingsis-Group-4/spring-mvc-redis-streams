@@ -1,9 +1,8 @@
 package spring.mvc.redis.events
 
-import java.util.UUID
-
 data class LintRequestEvent (
-    val snippetId: UUID,
+    val userId: String,
+    val snippetKey: String,
     val ruleConfig: String,
 )
 
